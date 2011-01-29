@@ -28,10 +28,10 @@ syntax enable                   " highlight syntax
 set formatoptions=qroct         " see :help fo-table for info
 set splitright                  " splitting a window will put it to the right
 
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType haml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-au BufRead,BufNewFile *.scss set filetype=scss
+"autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType haml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"au BufRead,BufNewFile *.scss set filetype=scss
 
 "
 " Keybindings:

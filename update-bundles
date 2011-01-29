@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+vim_org_scripts = [
+  ["javascript", "1840",  "indent"],
+]
+
+require 'fileutils'
+require 'open-uri'
+
+vim_dir = File.dirname(File.absolute_path(__FILE__))
+autoload_dir = File.join(vim_dir, "autoload")
+bundles_dir = File.join(vim_dir, "bundle")
+
+# Update pathogen
+FileUtils.cd(autoload_dir)
+puts "Updating pathogen"
+`wget -O pathogen.vim --no-check-certificate https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim`
+
+# Update git submodules
+FileUtils.cd(vim_dir)
+`git submodule foreach git checkout -q master`
+puts `git submodule foreach git pull`
+
+# Update boring old scripts that are not in git.
+FileUtils.cd(bundles_dir)
+vim_org_scripts.each do |name, script_id, script_type|
+  puts "Downloading #{name} from vim.org."
+  FileUtils.rm_rf name
+  
+  local_file = File.join(name, script_type, "#{name}.vim")
+  FileUtils.mkdir_p(File.dirname(local_file))
+  File.open(local_file, "w") do |file|
+    file << open("http://www.vim.org/scripts/download_script.php?src_id=#{script_id}").read
+  end
+end
