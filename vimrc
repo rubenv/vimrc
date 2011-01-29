@@ -1,6 +1,10 @@
 " .vimrc file
 " Author: Ruben Vermeersch <ruben@Lambda1.be>
 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
 " General Settings:
 set nocompatible                " Don't start in vi compatibility mode
 set expandtab                   " Use spaces instead of tabs
