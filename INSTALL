@@ -1,0 +1,7 @@
+To install this:
+
+    cd
+    git clone git://git.savanne.be/git/vim.git .vim
+    ln -s .vim/vimrc .vimrc
+
+Done!
