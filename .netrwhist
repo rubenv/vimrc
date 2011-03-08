@@ -1,2 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/ruben/Projects/sagio/public/javascripts'
+let g:netrw_dirhist_2='/home/ruben/Projects/survey-app-ng/public'
+let g:netrw_dirhist_3='/home/ruben/Projects/survey-app-ng/public/css'
+let g:netrw_dirhist_4='/home/ruben/Projects/survey-app-ng/application/stylesheets'
+let g:netrw_dirhist_5='/home/ruben/Projects/survey-app-ng/surveys'
+let g:netrw_dirhist_6='/home/ruben/Projects/comingsoon/scss'
