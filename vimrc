@@ -110,4 +110,3 @@ inoremap <Nul> <C-N>
 
 nmap <Tab> >>
 nmap <S-Tab> <<
-

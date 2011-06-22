@@ -2,6 +2,9 @@ To install this:
 
     cd
     git clone git://git.savanne.be/git/vim.git .vim
+    cd .vim
+    git submodule update --init
+    cd ..
     ln -s .vim/vimrc .vimrc
 
 Done!
