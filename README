@@ -8,3 +8,5 @@ To install this:
     ln -s .vim/vimrc .vimrc
 
 Done!
+
+Note: update-bundles doesn't work on OSX yet, only Linux.
