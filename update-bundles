@@ -14,7 +14,7 @@ bundles_dir = File.join(vim_dir, "bundle")
 # Update pathogen
 FileUtils.cd(autoload_dir)
 puts "Updating pathogen"
-`wget -O pathogen.vim --no-check-certificate https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim`
+`curl -o pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim`
 
 # Update git submodules
 FileUtils.cd(vim_dir)
