@@ -34,3 +34,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/rename"]
+	path = bundle/rename
+	url = git@github.com:danro/rename.vim.git
