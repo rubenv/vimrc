@@ -2,6 +2,7 @@
 
 vim_org_scripts = [
   ["javascript", "11838",  "indent"],
+  ["rename", "11097",  "util"],
 ]
 
 require 'fileutils'
