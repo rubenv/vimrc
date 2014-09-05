@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 vim_org_scripts = [
-  ["javascript", "11838",  "indent"],
+  #["javascript", "11838",  "indent"],
 ]
 
 require 'fileutils'
