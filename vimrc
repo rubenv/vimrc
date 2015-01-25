@@ -110,3 +110,10 @@ inoremap <Nul> <C-N>
 
 nmap <Tab> >>
 nmap <S-Tab> <<
+
+" Go configuration
+let g:go_fmt_command = "goimports"
+" Map \\ to tests, but save and store position first
+autocmd FileType go nmap <leader><leader> :wa<CR>mT:GoTest<CR>
+" Jump back to last editing position before test run: \'
+autocmd FileType go nmap <leader>' `T
