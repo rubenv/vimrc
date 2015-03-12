@@ -34,7 +34,7 @@ set wildmode=longest,list,full
 syntax enable                   " highlight syntax
 
 " Unlimited persistent undo:
-set undofile 
+set undofile
 set undodir=~/.vim/undo
 
 " Enable basic mouse behavior such as resizing buffers.
@@ -50,14 +50,14 @@ set pastetoggle=<F2>
 map § :nohlsearch<CR>
 "let mapleader = ','
 map <leader>l :Align
-nmap <leader>a :Ack 
+nmap <leader>a :Ack
 nmap <leader>b :CommandTBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>t :CommandT<CR>
 nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>] :TagbarToggle<CR>
-nmap <leader><space> :call whitespace#strip_trailing()<CR>
+nmap <leader><space> :%s/\s\+$//<CR>
 nmap <leader>g :ToggleGitGutter<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
@@ -95,7 +95,7 @@ inoremap  {<CR> {<CR>}<C-O>O
 
 " Insert <Tab> or complete identifier
 " if the cursor is after a keyword character
-function MyTabOrComplete()
+function! MyTabOrComplete()
     let col = col('.')-1
     if !col || getline('.')[col-1] !~ '\k'
          return "\<tab>"
@@ -113,6 +113,7 @@ nmap <S-Tab> <<
 
 " Go configuration
 let g:go_fmt_command = "goimports"
+
 " Map \\ to tests, but save and store position first
 autocmd FileType go nmap <leader><leader> :wa<CR>mT:GoTest<CR>
 " Jump back to last editing position before test run: \'
