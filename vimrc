@@ -105,9 +105,6 @@ function! MyTabOrComplete()
 endfunction
 inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
 
-" Map ctrl-space to complete-next.
-inoremap <Nul> <C-N>
-
 nmap <Tab> >>
 nmap <S-Tab> <<
 

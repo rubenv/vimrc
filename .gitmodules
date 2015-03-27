@@ -40,3 +40,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "bundle/flavored-markdown"]
+	path = bundle/flavored-markdown
+	url = git://github.com/jtratner/vim-flavored-markdown.git
