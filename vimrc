@@ -64,6 +64,7 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 
 " plugin settings
 let g:CommandTMaxHeight=20
+let g:CommandTWildIgnore=&wildignore . ",**/node_modules/*"
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0
 " ZOMG the_silver_searcher is so much faster than ack"
@@ -80,7 +81,7 @@ autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 " Position:
 "
 set viminfo='10,\"100,:20,%,n~/.viminfo
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " Fix Cursor in TMUX
 if exists('$TMUX')
