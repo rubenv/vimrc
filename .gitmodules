@@ -43,3 +43,12 @@
 [submodule "bundle/flavored-markdown"]
 	path = bundle/flavored-markdown
 	url = git://github.com/jtratner/vim-flavored-markdown.git
+[submodule "bundle/vim-hclfmt"]
+	path = bundle/vim-hclfmt
+	url = https://github.com/fatih/vim-hclfmt.git
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = https://github.com/markcornick/vim-terraform.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git

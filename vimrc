@@ -97,21 +97,17 @@ inoremap  {<CR> {<CR>}<C-O>O
 
 " Insert <Tab> or complete identifier
 " if the cursor is after a keyword character
-function! MyTabOrComplete()
-    let col = col('.')-1
-    if !col || getline('.')[col-1] !~ '\k'
-         return "\<tab>"
-    else
-         return "\<C-N>"
-    endif
-endfunction
-inoremap <Tab> <C-R>=MyTabOrComplete()<CR>
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 nmap <Tab> >>
 nmap <S-Tab> <<
 
 " Go configuration
 let g:go_fmt_command = "goimports"
+
+" HCL formatting
+let g:hcl_fmt_autosave = 1
 
 " Map \\ to tests, but save and store position first
 autocmd FileType go nmap <leader><leader> :wa<CR>mT:GoTest<CR>
