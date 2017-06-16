@@ -1,5 +1,5 @@
 " .vimrc file
-" Author: Ruben Vermeersch <ruben@savanne.be>
+" Author: Ruben Vermeersch <ruben@rocketeer.be>
 
 filetype off
 call pathogen#infect()
@@ -39,7 +39,7 @@ set undodir=~/.vim/undo
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
-if exists('$TMUX')  " Support resizing in tmux
+if exists('$TMUX') && !has('nvim')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
